@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student-Form</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0px;
+      }
+      h1 {
+        text-align: center;
+        padding: 48px;
+      }
+      form {
+        font-size: 20px;
+        padding: 10px;
+      }
+      div {
+        padding: 4px;
+        margin: 5px;
+      }
+      #btn {
+        text-align: center;
+      }
+
+      .myBtn {
+        padding: 3px;
+        border: 1px solid black;
+        margin: 10px;
+        border-radius: 5px;
+        font-weight: 700;
+      }
+      .myBtn:hover {
+        background-color: #c2bbfa;
+        padding: 5px;
+      }
+      input {
+        background-color: #f5dbf8;
+        padding: 4px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 name="heading" class="heading">STUDENT REGISTRATION FORM</h1>
+    <p>For Semester 2026-University Enrollment</p>
+    <p>Please fill in all required fields marked with *</p>
+    <form action="">
+      <fieldset>
+        <legend>👨‍🎓 PERSONAL INFORMATION</legend>
+        <div>
+          <label for="fName">
+            *First Name :
+            <input type="text" id="fName" placeholder="First Name" required />
+          </label>
+          <label for="lName">
+            *Last Name :
+            <input type="text" id="lName" placeholder="Last Name" required />
+          </label>
+        </div>
+        <div>
+          <label for="bDate">
+            *Date of Birth :
+            <input type="date" name="bDate" id="bDate" required />
+          </label>
+        </div>
+        <div>
+          <p><strong>*Gender :</strong></p>
+
+          <input type="radio" name="gender" id="male" />
+          <label for="male">Male</label>
+
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Female</label>
+
+          <input type="radio" name="gender" id="other" />
+          <label for="other">Other</label>
+        </div>
+        <div>
+          <label for="email">
+            *Email :
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Valid Email ID"
+              required
+            />
+          </label>
+          <label for="phn">
+            *Mobile No. :
+            <input
+              type="tel"
+              name="mobileNO"
+              id="mobileNO"
+              maxlength="10"
+              pattern="[0-9]{10}"
+              placeholder="10 Digit Mobile No."
+              required
+            />
+          </label>
+        </div>
+        <div id="btn">
+          <input type="submit" class="myBtn" value="SUBMIT" />
+          <input type="reset" class="myBtn" value="RESET" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
