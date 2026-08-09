@@ -1,0 +1,17 @@
+ *{
+    padding: 0;
+    margin: 0;
+ }
+ body{
+    text-align: center;
+ }
+ header{
+    background-color: #ceefb9;
+ }
+ main{
+    background-color: #eee6ff;
+ }
+ footer{
+    background-color: #f3ffff;
+    font-style: italic;
+ }
