@@ -1,0 +1,28 @@
+ .boxes{
+    display: grid;
+    height: 400px;
+    grid-template-columns: 120px 120px 120px;
+    font-size: 30px;
+    justify-content: center;
+   
+  
+   
+ }
+ .box{
+    border: 2px solid black;
+    display: grid;
+    place-content: center;
+
+ }
+ .box-1{
+    grid-column: 1/4;
+ }
+ .box-2{
+    grid-column: 1/4;
+ }
+ .box-4{
+    grid-column: 2/4;
+ }
+.box-6{
+    grid-column: 2/4;
+ }
