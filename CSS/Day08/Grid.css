@@ -1,11 +1,9 @@
  .boxes{
     display: grid;
-    height: 400px;
-    grid-template-columns: 120px 120px 120px;
+    height: 50vh;
+    grid-template-columns: repeat(3, 1fr);
     font-size: 30px;
     justify-content: center;
-   
-  
    
  }
  .box{
@@ -14,15 +12,8 @@
     place-content: center;
 
  }
- .box-1{
-    grid-column: 1/4;
- }
- .box-2{
-    grid-column: 1/4;
- }
- .box-4{
-    grid-column: 2/4;
- }
-.box-6{
-    grid-column: 2/4;
- }
+@media(max-width : 600px){
+    .boxes{
+            grid-template-columns: 1fr;
+    }
+}
