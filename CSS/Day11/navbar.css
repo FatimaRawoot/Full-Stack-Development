@@ -1,0 +1,27 @@
+ *{
+    padding: 0;
+    margin: 0;
+ }
+ nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid black;
+    background-color: #ff85ff;
+    padding: 5px;
+    
+    
+ }
+ .box{
+    cursor: pointer;
+ }
+ @media(max-width:600px){
+    nav{
+        flex-direction: column;
+        width: 22vw;
+        height: 100vh;
+        justify-content: flex-start;
+        
+    }
+ }
