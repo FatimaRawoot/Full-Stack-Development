@@ -1,0 +1,10 @@
+ let name = "Fatima";
+ let sem = 5;
+ let isStudent = true;
+ let course = "Full Stack Development";
+ let isLearning = true;
+console.log(name);
+console.log(sem);
+console.log(isStudent);
+console.log(course);
+console.log(isLearning);
