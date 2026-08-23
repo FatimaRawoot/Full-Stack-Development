@@ -77,7 +77,7 @@ DSA & Problem Solving
 
 - [x] HTML Basics
 - [x] Git & GitHub Basics
-- [ ] CSS
+- [x] CSS
 - [ ] JavaScript
 - [ ] React
 - [ ] TypeScript
