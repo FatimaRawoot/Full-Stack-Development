@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="title">MY Name</h1>
+    <p id="message">I am learning JavaScript.</p>
+    <p id="goal">My Goal</p>
+    <script>
+        let title = document.querySelector("#title");
+        let message = document.querySelector("#message");
+        let goal = document.querySelector("#goal");
+
+        title.textContent = "Fatima's Portfolio";
+        message.textContent = "I am becoming a Full Stack Developer.";
+        goal.textContent = "My Goal is to become a professional Full Stack Developer."
+        console.log(title);
+        console.log(message);
+        console.log(goal);
+        
+    </script>
+</body>
+</html>
