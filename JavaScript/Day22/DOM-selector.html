@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+</head>
+<body>
+    <h1 id="title">My Name</h1>
+    <p class="info">I am learning JavaScript.</p>
+    <p class="info">I am practicing DOM.</p>
+    <button id="btn">Click Me</button>
+    
+    <script>
+        let heading = document.querySelector("#title");
+        heading.textContent = "My Full Stack Journey";
+        let firstPara = document.querySelector(".info");
+        firstPara.textContent = "I am learning DOM.";
+        let bothPara = document.querySelectorAll(".info");
+        let btn = document.getElementById("btn");
+        console.log(firstPara);
+        console.log(bothPara);
+
+    </script>
+</body>
+</html>
