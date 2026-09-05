@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript events</title>
+  </head>
+  <body>
+    <h1 id="heading">My Portfolio</h1>
+    <button id="changeBtn">Change Text</button> <br />
+    <span> Clicked :</span>
+    <span id="counter"> 0 </span><br />
+    <button id="countBtn">Count Click</button>
+
+    <script>
+      let changeBtn = document.querySelector("#changeBtn");
+      let heading = document.querySelector("#heading");
+      let countBtn = document.querySelector("#countBtn");
+      let counter = document.querySelector("#counter");
+      counter;
+
+      changeBtn.addEventListener("click", function () {
+      heading.textContent = "Welcome";
+
+      });
+
+      let count = 0;
+
+      countBtn.addEventListener("click", function(){ 
+        count++;
+        counter.textContent = count;
+      });
+    </script>
+  </body>
+</html>
