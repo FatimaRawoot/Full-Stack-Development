@@ -11,12 +11,16 @@
     <span> Clicked :</span>
     <span id="counter"> 0 </span><br />
     <button id="countBtn">Count Click</button>
+    <button id="darkMode">Dark Theme</button>
 
     <script>
       let changeBtn = document.querySelector("#changeBtn");
       let heading = document.querySelector("#heading");
       let countBtn = document.querySelector("#countBtn");
       let counter = document.querySelector("#counter");
+      let body = document.querySelector("body");
+      let darkMode = document.querySelector("#darkMode");
+      
       counter;
 
       changeBtn.addEventListener("click", function () {
@@ -30,6 +34,13 @@
         count++;
         counter.textContent = count;
       });
+
+      darkMode.addEventListener("click", function(){
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+      })
+
+
     </script>
   </body>
 </html>
