@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <h1 id="name">My Name</h1>
+    <p id="bio">I am learning web development.</p>
+    <button id="changeBtn">Change Profile</button>
+
+    <script>
+        let name = document.querySelector("#name");
+        let bio = document.querySelector("#bio");
+        let changeBtn = document.querySelector("#changeBtn");
+
+        changeBtn.addEventListener("click", function(){
+            name.textContent = "Fatima - Full Stack Developer";
+            bio.textContent = "I am learning JavaScript DOM manipulation.";
+            name.style.color = "#1fffff";
+            bio.style.backgroundColor = "#4f47f5";
+        })
+
+    </script>
+</body>
+</html>
