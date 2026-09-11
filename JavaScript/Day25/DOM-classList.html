@@ -1,17 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>classList</title>
-</head>
-<body>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
     <h1 id="heading">My Profile</h1>
     <p id="para">I am learning Full Stack development.</p>
     <button id="button">Show / Hide Profile</button>
 
     <script>
-        
+      let heading = document.querySelector("#heading");
+      let para = document.querySelector("#para");
+      let button = document.querySelector("#button");
+      button.addEventListener("click", function () {
+        heading.classList.toggle("hidden");
+        para.classList.toggle("hidden");
+       
+      });
     </script>
-</body>
+  </body>
 </html>
