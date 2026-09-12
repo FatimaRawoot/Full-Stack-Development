@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM styling</title>
+  </head>
+  <body>
+    <h1 id="heading">My Portfolio</h1>
+    <p id="para">I am learning Full Stack Development.</p>
+    <button id="btn">Change Style</button>
+
+    <script>
+        let heading = document.querySelector("#heading");
+        let para = document.querySelector("#para");
+        let btn = document.querySelector("#btn");
+        let body = document.querySelector("body");
+        btn.addEventListener("click", function(){
+            heading.style.color = "#ff96f9";
+            para.style.fontSize = "25px";
+            body.style.backgroundColor = "black";
+            body.style.color = "white";
+
+        });
+    </script>
+  </body>
+</html>
