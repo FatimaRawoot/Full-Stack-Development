@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element Creation In DOM</title>
+  </head>
+  <body>
+    <h1 id="heading">My Portfolio</h1>
+    <button id="addBtn">Add Message</button>
+    <div id="container"></div>
+
+    <script>
+      let container = document.querySelector("#container");
+      let addBtn = document.querySelector("#addBtn");
+      addBtn.addEventListener("click", function () {
+        let para = document.createElement("p");
+        para.textContent = "Welcome To My Portfolio!";
+        container.appendChild(para);
+
+        let removeBtn = document.createElement("button");
+        removeBtn.textContent = "Remove Message";
+        container.appendChild(removeBtn);
+        removeBtn.addEventListener("click", function(){
+            para.remove();
+            removeBtn.remove();
+        })
+      });
+    </script>
+  </body>
+</html>
