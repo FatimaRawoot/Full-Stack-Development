@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        Name : <input type="text" id="yourName" ><br>
+        Email : <input type="text" id="yourEmail" ><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        let myForm = document.querySelector("#myForm");
+        let yourName = document.querySelector("#yourName");
+        let yourEmail = document.querySelector("#yourEmail");
+        myForm.addEventListener("submit", function(event){
+            event.preventDefault();
+            if(yourName.value.trim() === ""){
+                alert("Enter your name");
+            }
+            else{
+                console.log(yourName.value);
+            }
+            if(yourEmail.value.trim() === ""){
+                alert("Enter your Email");
+            }
+            else{
+                console.log(yourEmail.value);
+            }
+        })
+    </script>
+    
+</body>
+</html>
