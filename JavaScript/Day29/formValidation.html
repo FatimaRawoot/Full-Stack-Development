@@ -4,33 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
+    <style>
+        p.errorMsg{
+            color: rgb(99, 1, 1);
+            background-color: rgb(252, 137, 137);
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <form action="" id="myForm">
         Name : <input type="text" id="yourName" ><br>
-        Email : <input type="text" id="yourEmail" ><br>
-        <input type="submit" value="Submit">
+        <p id="nameError" class="errorMsg"></p><br>
+        Email : <input type="email" id="yourEmail" ><br>
+        <p id="emailError" class="errorMsg"></p><br>
+        <input type="submit" value="Submit"><br>
+        <p id="success"></p>
     </form>
 
     <script>
         let myForm = document.querySelector("#myForm");
         let yourName = document.querySelector("#yourName");
         let yourEmail = document.querySelector("#yourEmail");
+        let nameError = document.querySelector("#nameError");
+        let emailError = document.querySelector("#emailError");
+        let success = document.querySelector("#success");
         myForm.addEventListener("submit", function(event){
             event.preventDefault();
             if(yourName.value.trim() === ""){
-                alert("Enter your name");
-            }
+               nameError.textContent = "Enter Your Name";            }
             else{
-                console.log(yourName.value);
+                nameError.textContent = "";
             }
             if(yourEmail.value.trim() === ""){
-                alert("Enter your Email");
+               emailError.textContent = "Enter Your email"; 
             }
             else{
-                console.log(yourEmail.value);
+                 emailError.textContent = "";
+            }
+            success.textContent = "";
+            if(yourName.value.trim() !== "" && yourEmail.value.trim() !== ""){
+                success.textContent = "Registration Successful !"
             }
         })
+
     </script>
     
 </body>
