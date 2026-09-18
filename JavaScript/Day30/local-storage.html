@@ -6,6 +6,7 @@
     <title>Local Storage</title>
   </head>
   <body>
+    
     <input type="text" id="nameInput">
     <button id="saveBtn">Save Name</button>
     <button id="showBtn">Show Name</button>
@@ -14,11 +15,27 @@
     <p id="result"></p>
 
     <script>
+      
         let nameInput = document.querySelector("#nameInput");
         let saveBtn = document.querySelector("#saveBtn");
         let showBtn = document.querySelector("#showBtn");
         let deleteBtn = document.querySelector("#deleteBtn");
         let result = document.querySelector("#result");
+        
+      
+          saveBtn.addEventListener("click", function(){
+          localStorage.setItem("name", nameInput.value);
+        });
+        showBtn.addEventListener("click", function(){
+        let name = localStorage.getItem("name");
+          result.textContent = name;
+        });
+        deleteBtn.addEventListener("click", function(){
+          localStorage.removeItem("name");
+          result.textContent = "";
+        })
+       
+        
     </script>
   </body>
 </html>
