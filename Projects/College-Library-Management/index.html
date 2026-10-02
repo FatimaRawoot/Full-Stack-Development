@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>College Library Management System</h1>
+
+    <h2>Student Entry</h2>
+
+    <form id="libraryForm">
+
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <br><br>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" placeholder="Enter your department" required>
+
+        <br><br>
+
+        <label for="prn">PRN:</label>
+        <input type="text" id="prn" placeholder="Enter your PRN" required>
+
+        <br><br>
+
+        <button type="submit">Enter Library</button>
+
+    </form>
+
+
+    <h2>Currently Inside Library</h2>
+
+    <div id="studentList">
+        <p>No students inside the library.</p>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
