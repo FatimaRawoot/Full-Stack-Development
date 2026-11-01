@@ -1,7 +1,12 @@
+
 const libraryForm = document.getElementById("libraryForm");
 const studentList = document.getElementById("studentList");
 
-let students = [];
+// LocalStorage se purana data lena
+let students = JSON.parse(localStorage.getItem("students")) || [];
+
+// Page open hone par students show karna
+displayStudents();
 
 libraryForm.addEventListener("submit", function (event) {
 
@@ -15,10 +20,13 @@ libraryForm.addEventListener("submit", function (event) {
         name: name,
         department: department,
         prn: prn,
-        entryTime: new Date()
+        entryTime: new Date().toISOString()
     };
 
     students.push(student);
+
+    // Updated data LocalStorage mein save karna
+    localStorage.setItem("students", JSON.stringify(students));
 
     displayStudents();
 
@@ -37,13 +45,12 @@ function displayStudents() {
             <h3>${student.name}</h3>
             <p>Department: ${student.department}</p>
             <p>PRN: ${student.prn}</p>
-            <p>Entry Time: ${student.entryTime.toLocaleTimeString()}</p>
+            <p>Entry Time: ${new Date(student.entryTime).toLocaleTimeString()}</p>
             <button onclick="exitLibrary(${index})">Exit Library</button>
             <hr>
         `;
 
         studentList.appendChild(studentCard);
-
     });
 }
 
@@ -53,7 +60,7 @@ function exitLibrary(index) {
 
     const exitTime = new Date();
 
-    const duration = exitTime - student.entryTime;
+    const duration = exitTime - new Date(student.entryTime);
 
     const totalMinutes = Math.floor(duration / (1000 * 60));
 
@@ -68,6 +75,9 @@ function exitLibrary(index) {
     );
 
     students.splice(index, 1);
+
+    // Exit ke baad updated data save karna
+    localStorage.setItem("students", JSON.stringify(students));
 
     displayStudents();
 }
